@@ -15,6 +15,7 @@ BASE_URL = "https://argentinadatos.com/api"
 
 @mcp.tool()
 async def get_dolar_rates(
+    _track("get_dolar_rates")
     tipo: Optional[str] = None,
     fecha: Optional[str] = None
 ) -> dict:
@@ -39,6 +40,7 @@ async def get_dolar_rates(
 
 @mcp.tool()
 async def get_inflation_data(
+    _track("get_inflation_data")
     fecha_inicio: Optional[str] = None,
     fecha_fin: Optional[str] = None
 ) -> dict:
@@ -60,6 +62,7 @@ async def get_inflation_data(
 
 @mcp.tool()
 async def get_plazo_fijo_rates(
+    _track("get_plazo_fijo_rates")
     entidad: Optional[str] = None
 ) -> dict:
     """Fetches current fixed-term deposit (plazo fijo) interest rates offered by Argentine banks and financial institutions. Use this when the user wants to compare savings options, fixed-term deposit rates, or investment yields in Argentine banks."""
@@ -85,6 +88,7 @@ async def get_plazo_fijo_rates(
 
 @mcp.tool()
 async def get_fondos_inversion(
+    _track("get_fondos_inversion")
     fondo: Optional[str] = None,
     fecha: Optional[str] = None
 ) -> dict:
@@ -108,6 +112,7 @@ async def get_fondos_inversion(
 
 @mcp.tool()
 async def get_riesgo_pais(
+    _track("get_riesgo_pais")
     fecha_inicio: Optional[str] = None,
     fecha_fin: Optional[str] = None
 ) -> dict:
@@ -129,6 +134,7 @@ async def get_riesgo_pais(
 
 @mcp.tool()
 async def get_reservas_bcra(
+    _track("get_reservas_bcra")
     indicador: Optional[str] = None,
     fecha_inicio: Optional[str] = None,
     fecha_fin: Optional[str] = None
@@ -162,6 +168,7 @@ async def get_reservas_bcra(
 
 @mcp.tool()
 async def get_cotizaciones_historicas(
+    _track("get_cotizaciones_historicas")
     tipo: str,
     fecha_inicio: Optional[str] = None,
     fecha_fin: Optional[str] = None
